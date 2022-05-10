@@ -236,18 +236,20 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
+            <h2>REALY Benchmark (<u>Re</u>gion-<u>a</u>ware 3D face benchmark based on the <a href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/"><u>LY</u>HM</a> dataset)</h2>
+            <div class="REALY samples">
+                <img src="./figures/examples.jpg" alt="REALY" width="100%">
+                <img src="./figures/multi-view.jpg" alt="REALY" width="100%">
+            </div>
+            <p style="text-align:justify">
+                The REALY benchmark uses multi-view rendered portraits images of 100 high quality scans from <a href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/">LYHM</a> to evaluate 3D face reconstruction accuracy. Examples of REALY benchmark:  <i>First row</i>: globally aligned high-resolution scans with textures. <i>Second row</i>: retopologized meshes in HIFI3D topology with semantically consistent keypoints (red points). <i>Third row</i>: high quality face region masks of each scan. <i>Fourth-Seventh row</i>: multi-view images of each scan. <i>Eighth row</i>: frontal images of each scan.
+            </p>
+            <p style="text-align:justify">
+                The single-view reconstruction results of different methods are reported separately (100 frontal images + 400 multi-view images).
+            </p>
+            <h2>-frontal image results</h2>
+            <div class="table-responsive"> 
             <div class="table">
-                <h2>REALY Benchmark (<u>Re</u>gion-<u>a</u>ware 3D face benchmark based on the <a href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/"><u>LY</u>HM</a> dataset)</h2>
-                <div class="REALY samples">
-                    <img src="./figures/examples.jpg" alt="REALY" width="100%">
-                    <img src="./figures/multi-view.jpg" alt="REALY" width="100%">
-                </div>
-                <p style="text-align:justify">
-                    The REALY benchmark uses multi-view rendered portraits images of 100 high quality scans from <a href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/">LYHM</a> to evaluate 3D face reconstruction accuracy. Examples of REALY benchmark:  <i>First row</i>: globally aligned high-resolution scans with textures. <i>Second row</i>: retopologized meshes in HIFI3D topology with semantically consistent keypoints (red points). <i>Third row</i>: high quality face region masks of each scan. <i>Fourth-Seventh row</i>: multi-view images of each scan. <i>Eighth row</i>: frontal images of each scan.
-                </p>
-                <p style="text-align:justify">
-                    We ensure results submitted to participate in the REALY benchmark are kept confidential strictly. No information about the participants or the results is released or shared with others until explicitly specified by the participants, or after appearing in a peer-reviewed conference or journal. In order to publish results to the REALY benchmark website, follow the <strong>Participation Instructions</strong> below.
-                </p>
                 <table id="mytable" class="table table-hover download-table" style="width: 100%;">
                     <thead class="thead-light">
                     <tr style="height: 44px;">
@@ -550,11 +552,277 @@
 
                     </tbody>
                     </table>
-                <p style="text-align:justify">"*-c" indicates coarse model and "*-f" indicates fine model. <strong>bold font</strong> indicates the best one in the column. The benchmark is continuously updated to encourage researchers to participate in. We only consider methods that were defined as public when submitting to REALY, or that are publicly available in a peer-reviewed conference or journal. Methods are ranked according to the average region-wise error, you can also sort by a specified metic by clicking its corresponding table header.</p>
-
+            </div>
+                
             </div>
         </div>
     </div>
+
+
+    
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h2>-multi-view image results</h2>
+            <div class="table-responsive"> 
+                <div class="table">
+                    <table id="mytable2" class="table table-hover download-table" style="width: 100%;">
+                        <thead class="thead-light">
+                        <tr style="height: 44px;">
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col" rowspan="2">Rank</th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col" rowspan="2">Method</th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col" colspan="3"><a class="btn" style="width: 100%; background-color:rgb(181,228,140);color:black"><strong>@nose (mm)</strong></a></th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col" colspan="3"><a class="btn" style="width: 100%; background-color:rgb(255,183,3);color:black"><strong>@mouth (mm)</strong></a></th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col" colspan="3"><a class="btn" style="width: 100%; background-color:rgb(189,178,255);color:black"><strong>@forehead (mm)</strong></a></th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col" colspan="3"><a class="btn" style="width: 100%; background-color:rgb(144,224,239);color:black"><strong>@cheek (mm)</strong></a></th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col"><a class="btn" style="width: 100%; background-color:rgb(217,217,217);color:black"><strong>all</strong></a></th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="&quot;col" rowspan="2">Source</th>
+                            </tr>
+                            <tr>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col">avg.</th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col">med.</th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col">std.</th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col">avg.</th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col">med.</th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col">std.</th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col">avg.</th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col">med.</th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col">std.</th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col">avg.</th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col">med.</th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col">std.</th>
+                            <th style="text-align: center; vertical-align: middle; height: 44px;" scope="col">avg.</th>
+                            </tr>
+                        </thead>
+    
+                        <tbody>
+    
+                        <!-- Deep3D -->
+                        <tr style="height: 44px;">
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-info"  style="width: 100%;" href="https://arxiv.org/pdf/1903.08527.pdf">Deep3D</a></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.697</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.651</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><strong>0.314</strong></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><strong>1.391</strong></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.341</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><strong>0.435</strong></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><strong>2.022</strong></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><strong>1.975</strong></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><strong>0.485</strong></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.493</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.425</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.494</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><strong>1.651</strong></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-success" style="width: 100%;"  href="https://github.com/microsoft/Deep3DFaceReconstruction">Code</a></td>
+                        </tr>
+                        
+                        <!-- MGCNet -->
+                        <tr style="height: 44px;">
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-info"  style="width: 100%;" href="https://arxiv.org/pdf/2007.12494.pdf">MGCNet</a></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.842</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.812</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.366</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.408</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><strong>1.325</strong></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.437</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.253</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.206</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.507</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.669</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.626</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.642</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.793</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-success" style="width: 100%;" href="https://github.com/jiaxiangshang/MGCNet">Code</a></td>
+                        </tr>
+    
+                        <!-- DECA-coarse -->
+                        <tr style="height: 44px;">
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">3.</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-info" style="width: 100%;" href="https://arxiv.org/pdf/2012.04012.pdf">DECA-c</a></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><strong>1.650</strong></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><strong>1.634</strong></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.321</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.265</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.150</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.822</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.321</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.273</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.582</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.461</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><strong>1.371</strong></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.519</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.924</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-success" style="width: 100%;"  href="https://github.com/YadiraF/DECA">Code</a></td>
+                        </tr>                    
+
+                        <!-- 3DDFA-v2 -->
+                        <tr style="height: 44px;">
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">4.</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-info" style="width: 100%;" href="https://arxiv.org/pdf/2009.09960.pdf">3DDFA-v2</a></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.882</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.845</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.507</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.696</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.670</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.542</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.463</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.373</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.597</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.827</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.750</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.651</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.967</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-success" style="width: 100%;"  href="https://github.com/cleardusk/3DDFA_V2">Code</a></td>
+                        </tr>                        
+
+                        <!-- SADRNet -->
+                        <tr style="height: 44px;">
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">5.</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-info" style="width: 100%;" href="https://arxiv.org/pdf/2106.03021.pdf">SADRNet</a></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.769</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.680</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.529</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.534</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.551</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.454</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.513</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.470</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.558</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.059</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.969</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.711</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.982</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-success" style="width: 100%;"  href="https://github.com/MCG-NJU/SADRNet">Code</a></td>
+                        </tr>
+    
+
+                        <!-- SynergyNet -->
+                        <tr style="height: 44px;">
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">6.</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-info" style="width: 100%;" href="https://arxiv.org/pdf/2110.09772.pdf">SynergyNet</a></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.012</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.993</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.523</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.773</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.715</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.549</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.647</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.586</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.733</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.644</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.525</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.628</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.019</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-success" style="width: 100%;"  href="https://github.com/choyingw/SynergyNet">Code</a></td>
+                        </tr>    
+    
+                        <!-- PRNet -->
+                        <tr style="height: 44px;">
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">7.</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-info" style="width: 100%;" href="https://arxiv.org/pdf/1803.07835.pdf">PRNet</a></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.865</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.807</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.500</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.858</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.743</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.643</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.481</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.423</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.592</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.943</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.778</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.732</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.037</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-success" style="width: 100%;"  href="https://github.com/YadiraF/PRNet">Code</a></td>
+                        </tr>
+    
+    
+    
+                        <!-- DECA-fine -->
+                        <tr style="height: 44px;">
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">8.</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-info" style="width: 100%;" href="https://arxiv.org/pdf/2012.04012.pdf">DECA-f</a></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.049</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.984</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.421</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.472</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.408</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.836</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.411</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.350</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.567</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><strong>1.427</strong></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.390</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><strong>0.493</strong></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.090</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-success" style="width: 100%;"  href="https://github.com/YadiraF/DECA">Code</a></td>
+                        </tr>
+    
+    
+                        <!-- RingNet -->
+                        <tr style="height: 44px;">
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">9.</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-info" style="width: 100%;"
+                                    href="https://arxiv.org/pdf/1905.06817.pdf">RingNet</a></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.912</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.879</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.454</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.036</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.999</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.637</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">3.055</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.934</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.949</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.003</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.911</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.702</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.252</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-success"
+                                    style="width: 100%;" href="https://github.com/soubhiksanyal/RingNet">Code</a></td>
+                        </tr>
+    
+    
+                        <!-- ExpNet -->
+                        <tr style="height: 44px;">
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">10.</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-info" style="width: 100%;" href="https://arxiv.org/pdf/1802.00542.pdf">ExpNet</a></td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.520</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.418</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.482</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.203</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.122</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.448</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">3.455</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">3.327</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.085</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.798</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">1.774</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">0.539</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;">2.494</td>
+                            <td style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn btn-success" style="width: 100%;"  href="https://github.com/fengju514/Expression-Net">Code</a></td>
+                        </tr>        
+    
+    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <p style="text-align:justify">"*-c" indicates coarse model and "*-f" indicates fine model. <strong>bold font</strong> indicates the best one in the column. The benchmark is continuously updated to encourage researchers to participate in. We only consider methods that were defined as public when submitting to REALY, or that are publicly available in a peer-reviewed conference or journal. Methods are ranked according to the average region-wise error, you can also sort by a specified metic by clicking its corresponding table header.</p>
+
+            <p style="text-align:justify">
+                We ensure results submitted to participate in the REALY benchmark are kept confidential strictly. No information about the participants or the results is released or shared with others until explicitly specified by the participants, or after appearing in a peer-reviewed conference or journal. In order to publish results to the REALY benchmark website, follow the <strong>Participation Instructions</strong> below.
+            </p>
+        </div>
+    </div>
+
+
+
+
+    <hr />
+
 
     <div class="row">
         <div class="col-md-3"></div>
@@ -572,7 +840,7 @@
                         <li>Agreement: I (We) have read and known the benchmark is derived from the LYHM dataset. I (We) will cite the mentioned papers if use this benchmark. The test portrait images are rendered using the 3D models provided by LYHM dataset. The copyright of the portraits belongs to the original owner, LYHM dataset. I (We) will not copy, sell, trade or exploit the images for any commercial purposes. The benchmark allows non-commercial research and education purposes use only.</li>
                     </ul>
                 <p style="text-align:justify">    
-                    Then we will send back with a download url, where the frontal images and multi-view images are separately provided. After obtaining the 3D face reconstruction results, please send the <strong>".obj"</strong> files (should have the same names as their input images) to <a href="mailto:zenghaochai@gmail.com" class="author-email"><strong>zenghaochai@gmail.com</strong></a>. We recommend entitling the email as "REALY-SubmitResult-[MethodName]".
+                    Then we will send back with a download url, where the frontal images and multi-view images are separately provided. After obtaining the 3D face reconstruction results, please send the <strong>".obj"</strong> files (should have the same names as their input images) to <a href="mailto:zenghaochai@gmail.com" class="author-email"><strong>zenghaochai@gmail.com</strong></a>. The shapes should have <strong>the same topology</strong>. We recommend entitling the email as "REALY-SubmitResult-[MethodName]".
                     The error metrics are then computed and will be returned as soon as possible. Note that we do not provide the ground truth scans for the test data.
                 </p>
                 <!-- <p>Submission format: </p> -->
@@ -617,6 +885,7 @@
         </div>
     </div>
 
+
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
@@ -643,7 +912,8 @@
 
 <p style="text-align:justify">The <a href="https://realy3dface.com/">REALY</a> paper:</p>
 <pre><code>@article{REALY,
-    author={Chai, Zenghao and Zhang, Haoxian and Ren, Jing and Kang, Di and Xu, Zhengzhuo and Zhe, Xuefei and Yuan, Chun and Bao, Linchao},
+    author={Chai, Zenghao and Zhang, Haoxian and Ren, Jing and Kang, Di and Xu, Zhengzhuo and
+        Zhe, Xuefei and Yuan, Chun and Bao, Linchao},
     title={REALY: Rethinking the Evaluation of 3D Face Reconstruction},
     journal={arXiv preprint arXiv:2203.09729},
     year={2022}
@@ -661,9 +931,12 @@
 
 <p style="text-align:justify">The <a href="https://facescape.nju.edu.cn/">FaceScape</a> paper:</p>
 <pre><code>@inproceedings{FaceScape, 
-    title={FaceScape: a Large-scale High Quality 3D Face Dataset and Detailed Riggable 3D Face Prediction}, 
-    author={Yang, Haotian and Zhu, Hao and Wang, Yanru and Huang, Mingkai and Shen, Qiu and Yang, Ruigang and Cao, Xun}, 
-    booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, 
+    title={FaceScape: a Large-scale High Quality 3D Face Dataset and Detailed Riggable
+        3D Face Prediction}, 
+    author={Yang, Haotian and Zhu, Hao and Wang, Yanru and Huang, Mingkai and Shen, Qiu and
+        Yang, Ruigang and Cao, Xun}, 
+    booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
+        (CVPR)}, 
     year={2020} 
 }
 </code></pre>
@@ -671,8 +944,9 @@
 <p style="text-align:justify">The <a href="https://tencent-ailab.github.io/hifi3dface_projpage/">HIFI3D</a> paper:</p>
 <pre><code>@article{HIFI3D,
     title={High-Fidelity 3D Digital Human Head Creation from RGB-D Selfies},
-    author={Bao, Linchao and Lin, Xiangkai and Chen, Yajing and Zhang, Haoxian and Wang, Sheng and Zhe, Xuefei and Kang, Di and Huang, Haozhi 
-        and Jiang, Xinwei and Wang, Jue and Yu, Dong and Zhang, Zhengyou},
+    author={Bao, Linchao and Lin, Xiangkai and Chen, Yajing and Zhang, Haoxian and
+        Wang, Sheng and Zhe, Xuefei and Kang, Di and Huang, Haozhi and Jiang, Xinwei and
+        Wang, Jue and Yu, Dong and Zhang, Zhengyou},
     journal={ACM Transactions on Graphics},
     year={2021}
 }
@@ -686,7 +960,6 @@
 
 
 
-    <hr />
     
     <div class="row">
         <div class="col-md-3"></div>
@@ -702,108 +975,7 @@
 
     <hr />
 
-    <hr />
 
-
-
-    <script>
-
-$( document ).ready(function() {
-
-    // resize video to adjust the width of content
-    $('iframe').on("load", function() {
-        //$(this).height($(this).contents().height());
-        var w = $(this).parents(".video").width();
-        var h = w * 315 / 560;
-        console.log(w);
-        console.log(h);
-        $(this).width(w);
-        $(this).height(h);
-    });
-
-    $('#player1').on("load", function() {
-        // change source of videos
-        $('#btn-youtube-1').click(function() {
-            console.log('change to youtube src');
-            $('#player1').attr("src", "https://www.youtube.com/embed/e9ti6mCnxLU");
-        });
-
-        $('#btn-bilibili-1').click(function() {
-            console.log('change to bilibili src');
-            $('#player1').attr("src", "https://player.bilibili.com/player.html?aid=797496848&bvid=BV1gy4y1r7R7&cid=245171969&page=1");
-        });
-    });
-
-
-    $('#player2').on("load", function() {
-
-        $('#btn-youtube-2').click(function() {
-            console.log('change to youtube src');
-            $('#player2').attr("src", "https://www.youtube.com/embed/9_UfU8zNbEo");
-        });
-
-        $('#btn-bilibili-2').click(function() {
-            console.log('change to bilibili src');
-            $('#player2').attr("src", "https://player.bilibili.com/player.html?aid=839947689&bvid=BV1e54y1R754&cid=245173015&page=1");
-        });
-    });
-
-
-    $("#player3").on("load", function() {
-
-        $('#btn-youtube-3').click(function() {
-            console.log('change to youtube src');
-            $('#player3').attr("src", "https://www.youtube.com/embed/8HoNyrfGTKU");
-        });
-
-        $('#btn-bilibili-3').click(function() {
-            console.log('change to bilibili src');
-            $('#player3').attr("src", "https://player.bilibili.com/player.html?aid=329899102&bvid=BV1iA41177vV&cid=245174544&page=1");
-        });
-    });
-
-
-    $('#player4').on("load", function() {
-
-        $('#btn-youtube-4').click(function() {
-            console.log('change to youtube src');
-            $('#player4').attr("src", "https://www.youtube.com/embed/5Rgh72PL8Cc");
-        });
-
-        $('#btn-bilibili-4').click(function() {
-            console.log('change to bilibili src');
-            $('#player4').attr("src", "https://player.bilibili.com/player.html?aid=839923260&bvid=BV1454y1R7Au&cid=245174805&page=1");
-        });
-    });
-
-    $("#player5").on("load", function() {
-
-        $('#btn-youtube-5').click(function() {
-            console.log('change to youtube src');
-            $('#player5').attr("src", "https://www.youtube.com/embed/ECREUAbbqLI");
-        });
-
-        $('#btn-bilibili-5').click(function() {
-            console.log('change to bilibili src');
-            $('#player5').attr("src", "https://player.bilibili.com/player.html?aid=842411783&bvid=BV1f54y1k7Rm&cid=245175212&page=1");
-        });
-    });
-    
-    $("#player6").on("load", function() {
-
-        $('#btn-youtube-6').click(function() {
-            console.log('change to youtube src');
-            $('#player6').attr("src", "https://www.youtube.com/embed/8FlFoIiCYVc");
-        });
-
-        $('#btn-bilibili-6').click(function() {
-            console.log('change to bilibili src');
-            $('#player6').attr("src", "https://player.bilibili.com/player.html?aid=842375110&bvid=BV1m54y1k79R&cid=245235315&page=1");
-        });
-    });
-});
-         
-    </script>
 
          
     <script src="./bootstrap/js/bootstrap.min.js"></script>
@@ -815,8 +987,10 @@ $( document ).ready(function() {
         $(function () {
             $("#mytable").tablesorter();
         });
+        $(function () {
+            $("#mytable2").tablesorter();
+        });
     </script>
-
 
 
   </body>
