@@ -161,10 +161,10 @@
                                 Zenghao Chai*, Haoxian Zhang*, Jing Ren, Di Kang,</p>
                         </li>
                         <li class="author">
-                            <p class="author-name">Zhengzhuo Xu, Xuefei Zhe, Chun Yuan<sup>†</sup>, Linchao Bao<sup>†</sup></p>
+                            <p class="author-name">Zhengzhuo Xu, Xuefei Zhe, Chun Yuan<sup>?</sup>, Linchao Bao<sup>?</sup></p>
                         </li>
                         <li class="author">
-                            <p class="author-name">(* Equal Contribution, <sup>†</sup> Corresponding Author)</p>
+                            <p class="author-name">(* Equal Contribution, <sup>?</sup> Corresponding Author)</p>
                         </li>
                     </ul>
                 </div>
@@ -216,6 +216,32 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h2>REALY Benchmark (<u>Re</u>gion-<u>a</u>ware 3D face benchmark based on the <a
+                    href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/"><u>LY</u>HM</a> dataset)</h2>
+            <div class="REALY samples">
+                <img src="./figures/examples.jpg" alt="REALY" width="100%">
+                <img src="./figures/multi-view.jpg" alt="REALY" width="100%">
+            </div>
+            <p style="text-align:justify">
+                The REALY benchmark uses multi-view rendered portraits images of 100 high quality scans from <a
+                    href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/">LYHM</a> to evaluate 3D face reconstruction
+                accuracy. Examples of REALY benchmark: <i>First row</i>: globally aligned high-resolution scans with
+                textures. <i>Second row</i>: retopologized meshes in HIFI3D topology with semantically consistent keypoints
+                (red points). <i>Third row</i>: high quality face region masks of each scan. <i>Fourth-Seventh row</i>:
+                multi-view images of each scan. <i>Eighth row</i>: frontal images of each scan.
+            </p>
+            <p style="text-align:justify">
+                The single-view reconstruction results of different methods are reported separately (100 frontal images +
+                400 multi-view images).
+            </p>
+
+        </div>
+    </div>
+
+    
     <hr />
     
     <div class="row">
@@ -233,6 +259,7 @@
 
     <hr />
 
+
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
@@ -244,10 +271,90 @@
             <p style="text-align:justify">
                 The REALY benchmark uses multi-view rendered portraits images of 100 high quality scans from <a href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/">LYHM</a> to evaluate 3D face reconstruction accuracy. Examples of REALY benchmark:  <i>First row</i>: globally aligned high-resolution scans with textures. <i>Second row</i>: retopologized meshes in HIFI3D topology with semantically consistent keypoints (red points). <i>Third row</i>: high quality face region masks of each scan. <i>Fourth-Seventh row</i>: multi-view images of each scan. <i>Eighth row</i>: frontal images of each scan.
             </p>
+
+        <p style="text-align:justify">
+            The statistical information of REALY is summarized as follows.
+        </p>
+
+            <div class="table-responsive">
+                <div class="table">
+                    <table id="stat" class="table table-hover download-table" style="width: 100%;">
+                        <thead class="thead-light">
+                            <tr style="height: 44px;">
+                                <th style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn" style="width: 100%; background-color:rgb(144,224,239);color:black"><strong>Metric</strong></a></th>
+                                <th style="text-align: center; vertical-align: middle; height: 44px;" colspan="5"><a class="btn" style="width: 100%; background-color:rgb(239, 147, 144);color:black"><strong>Age</strong></a></th>
+                                <th style="text-align: center; vertical-align: middle; height: 44px;" colspan="3"><a class="btn" style="width: 100%; background-color:rgb(144,224,239);color:black"><strong>Ethnicity</strong></a></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="height: 44px;">
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">Category</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">&lt;15</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">15-30</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">30-45</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">45-60</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">&gt;60</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">Caucasian</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">Asian</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">Black</td>
+                            </tr>
+                            <tr style="height: 44px;">
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">Ratio</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">12</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">31</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">27</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">21</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">9</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">79</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">16</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <div class="table">
+                    <table id="stat2" class="table table-hover download-table" style="width: 100%;">
+                        <thead class="thead-light">
+                            <tr style="height: 44px;">
+                                <th style="text-align: center; vertical-align: middle; height: 44px;"><a class="btn" style="width: 100%; background-color:rgb(144,224,239);color:black"><strong>Metric</strong></a></th>
+                                <th style="text-align: center; vertical-align: middle; height: 44px;" colspan="2"><a class="btn" style="width: 100%; background-color:rgb(239, 147, 144);color:black"><strong>Gender</strong></a></th>
+                                <th style="text-align: center; vertical-align: middle; height: 44px;" colspan="5"><a class="btn" style="width: 100%; background-color:rgb(144,224,239);color:black"><strong>BMI</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="height: 44px;">
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">Category</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">F</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">M</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">Underweight</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">Normal</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">Overweight</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">Obese</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">Extreme Obese</td>
+                            </tr>
+                            <tr style="height: 44px;">
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">Ratio</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">48</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">52</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">15</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">61</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">15</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">7</td>
+                                <td style="text-align: center; vertical-align: middle; height: 44px;">2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <hr />
             <p style="text-align:justify">
                 The single-view reconstruction results of different methods are reported separately (100 frontal images + 400 multi-view images).
             </p>
-            <h2>-frontal image results</h2>
+            <h2>Reconstruction from Single Image (frontal-view)</h2>
             <div class="table-responsive"> 
             <div class="table">
                 <table id="mytable" class="table table-hover download-table" style="width: 100%;">
@@ -563,7 +670,7 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <h2>-multi-view image results</h2>
+            <h2>Reconstruction from Single Image (side-view)</h2>
             <div class="table-responsive"> 
                 <div class="table">
                     <table id="mytable2" class="table table-hover download-table" style="width: 100%;">
