@@ -3,10 +3,20 @@
     <h2>Reconstruction from Single Image (frontal-view)</h2>
     <el-table
       class="table"
-      :data="frontalViewData"
+      :data="frontalViewDataRef"
       :header-cell-style="headerCellStyle"
+      @sort-change="sortChange"
     >
-      <el-table-column prop="rank" label="Rank" align="center" sortable />
+      <el-table-column
+        prop="rank"
+        label="Rank"
+        align="center"
+        sortable="custom"
+      >
+        <template #default="scope">
+          {{ scope.row["rank"].val }}
+        </template>
+      </el-table-column>
       <el-table-column
         prop="method"
         label="Method"
@@ -20,21 +30,36 @@
         </template>
       </el-table-column>
       <el-table-column prop="nose" label="@nose (mm)" align="center">
-        <el-table-column prop="nose_avg" label="avg." align="center" sortable>
+        <el-table-column
+          prop="nose_avg"
+          label="avg."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['nose_avg'].bold)">
               {{ row["nose_avg"].val }}
             </span>
           </template>
         </el-table-column>
-        <el-table-column prop="nose_med" label="med." align="center" sortable>
+        <el-table-column
+          prop="nose_med"
+          label="med."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['nose_med'].bold)">
               {{ row["nose_med"].val }}
             </span>
           </template>
         </el-table-column>
-        <el-table-column prop="nose_std" label="std." align="center" sortable>
+        <el-table-column
+          prop="nose_std"
+          label="std."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['nose_std'].bold)">
               {{ row["nose_std"].val }}
@@ -43,58 +68,73 @@
         </el-table-column>
       </el-table-column>
       <el-table-column prop="mouth" label="@mouth (mm)" align="center">
-        <el-table-column prop="mouth_avg" label="avg." align="center" sortable>
+        <el-table-column
+          prop="mouth_avg"
+          label="avg."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['mouth_avg'].bold)">
               {{ row["mouth_avg"].val }}
             </span>
-          </template></el-table-column
+          </template>
+        </el-table-column>
+        <el-table-column
+          prop="mouth_med"
+          label="med."
+          align="center"
+          sortable="custom"
         >
-        <el-table-column prop="mouth_med" label="med." align="center" sortable>
           <template #default="{ row }">
             <span :style="dataStyle(row['mouth_med'].bold)">
               {{ row["mouth_med"].val }}
             </span>
-          </template></el-table-column
+          </template>
+        </el-table-column>
+        <el-table-column
+          prop="mouth_std"
+          label="std."
+          align="center"
+          sortable="custom"
         >
-        <el-table-column prop="mouth_std" label="std." align="center" sortable>
           <template #default="{ row }">
             <span :style="dataStyle(row['mouth_std'].bold)">
               {{ row["mouth_std"].val }}
             </span>
-          </template></el-table-column
-        >
+          </template>
+        </el-table-column>
       </el-table-column>
       <el-table-column prop="forehead" label="@forehead (mm)" align="center">
         <el-table-column
           prop="forehead_avg"
           label="avg."
           align="center"
-          sortable
+          sortable="custom"
         >
           <template #default="{ row }">
             <span :style="dataStyle(row['forehead_avg'].bold)">
               {{ row["forehead_avg"].val }}
             </span>
-          </template></el-table-column
-        >
+          </template>
+        </el-table-column>
         <el-table-column
           prop="forehead_med"
           label="med."
           align="center"
-          sortable
+          sortable="custom"
         >
           <template #default="{ row }">
             <span :style="dataStyle(row['forehead_med'].bold)">
               {{ row["forehead_med"].val }}
             </span>
-          </template></el-table-column
-        >
+          </template>
+        </el-table-column>
         <el-table-column
           prop="forehead_std"
           label="std."
           align="center"
-          sortable
+          sortable="custom"
         >
           <template #default="{ row }">
             <span :style="dataStyle(row['forehead_std'].bold)">
@@ -104,21 +144,36 @@
         </el-table-column>
       </el-table-column>
       <el-table-column prop="cheek" label="@cheek (mm)" align="center">
-        <el-table-column prop="cheek_avg" label="avg." align="center" sortable>
+        <el-table-column
+          prop="cheek_avg"
+          label="avg."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['cheek_avg'].bold)">
               {{ row["cheek_avg"].val }}
             </span>
           </template>
         </el-table-column>
-        <el-table-column prop="cheek_med" label="med." align="center" sortable>
+        <el-table-column
+          prop="cheek_med"
+          label="med."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['cheek_med'].bold)">
               {{ row["cheek_med"].val }}
             </span>
           </template>
         </el-table-column>
-        <el-table-column prop="cheek_std" label="std." align="center" sortable>
+        <el-table-column
+          prop="cheek_std"
+          label="std."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['cheek_std'].bold)">
               {{ row["cheek_std"].val }}
@@ -127,7 +182,12 @@
         </el-table-column>
       </el-table-column>
       <el-table-column prop="all" label="all" align="center">
-        <el-table-column prop="all_avg" label="avg." align="center" sortable>
+        <el-table-column
+          prop="all_avg"
+          label="avg."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['all_avg'].bold)">
               {{ row["all_avg"].val }}
@@ -142,8 +202,18 @@
       class="table"
       :data="sideViewData"
       :header-cell-style="headerCellStyle"
+      @sort-change="sortChange2"
     >
-      <el-table-column prop="rank" label="Rank" align="center" sortable />
+      <el-table-column
+        prop="rank"
+        label="Rank"
+        align="center"
+        sortable="custom"
+      >
+        <template #default="scope">
+          {{ scope.row["rank"].val }}
+        </template>
+      </el-table-column>
       <el-table-column
         prop="method"
         label="Method"
@@ -157,21 +227,37 @@
         </template>
       </el-table-column>
       <el-table-column prop="nose" label="@nose (mm)" align="center">
-        <el-table-column prop="nose_avg" label="avg." align="center" sortable>
+        <el-table-column
+          prop="nose_avg"
+          label="avg."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['nose_avg'].bold)">
               {{ row["nose_avg"].val }}
             </span>
           </template>
         </el-table-column>
-        <el-table-column prop="nose_med" label="med." align="center" sortable>
+        <el-table-column
+          prop="nose_med"
+          label="med."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['nose_med'].bold)">
               {{ row["nose_med"].val }}
             </span>
           </template>
         </el-table-column>
-        <el-table-column prop="nose_std" label="std." align="center" sortable>
+        <el-table-column
+          prop="nose_std"
+          label="std."
+          align="center"
+          sortasortable="custom"
+          ble
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['nose_std'].bold)">
               {{ row["nose_std"].val }}
@@ -180,21 +266,36 @@
         </el-table-column>
       </el-table-column>
       <el-table-column prop="mouth" label="@mouth (mm)" align="center">
-        <el-table-column prop="mouth_avg" label="avg." align="center" sortable>
+        <el-table-column
+          prop="mouth_avg"
+          label="avg."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['mouth_avg'].bold)">
               {{ row["mouth_avg"].val }}
             </span>
           </template></el-table-column
         >
-        <el-table-column prop="mouth_med" label="med." align="center" sortable>
+        <el-table-column
+          prop="mouth_med"
+          label="med."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['mouth_med'].bold)">
               {{ row["mouth_med"].val }}
             </span>
           </template></el-table-column
         >
-        <el-table-column prop="mouth_std" label="std." align="center" sortable>
+        <el-table-column
+          prop="mouth_std"
+          label="std."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['mouth_std'].bold)">
               {{ row["mouth_std"].val }}
@@ -207,7 +308,7 @@
           prop="forehead_avg"
           label="avg."
           align="center"
-          sortable
+          sortable="custom"
         >
           <template #default="{ row }">
             <span :style="dataStyle(row['forehead_avg'].bold)">
@@ -219,7 +320,7 @@
           prop="forehead_med"
           label="med."
           align="center"
-          sortable
+          sortable="custom"
         >
           <template #default="{ row }">
             <span :style="dataStyle(row['forehead_med'].bold)">
@@ -231,7 +332,7 @@
           prop="forehead_std"
           label="std."
           align="center"
-          sortable
+          sortable="custom"
         >
           <template #default="{ row }">
             <span :style="dataStyle(row['forehead_std'].bold)">
@@ -241,21 +342,36 @@
         </el-table-column>
       </el-table-column>
       <el-table-column prop="cheek" label="@cheek (mm)" align="center">
-        <el-table-column prop="cheek_avg" label="avg." align="center" sortable>
+        <el-table-column
+          prop="cheek_avg"
+          label="avg."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['cheek_avg'].bold)">
               {{ row["cheek_avg"].val }}
             </span>
           </template>
         </el-table-column>
-        <el-table-column prop="cheek_med" label="med." align="center" sortable>
+        <el-table-column
+          prop="cheek_med"
+          label="med."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['cheek_med'].bold)">
               {{ row["cheek_med"].val }}
             </span>
           </template>
         </el-table-column>
-        <el-table-column prop="cheek_std" label="std." align="center" sortable>
+        <el-table-column
+          prop="cheek_std"
+          label="std."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['cheek_std'].bold)">
               {{ row["cheek_std"].val }}
@@ -264,7 +380,12 @@
         </el-table-column>
       </el-table-column>
       <el-table-column prop="all" label="all" align="center">
-        <el-table-column prop="all_avg" label="avg." align="center" sortable>
+        <el-table-column
+          prop="all_avg"
+          label="avg."
+          align="center"
+          sortable="custom"
+        >
           <template #default="{ row }">
             <span :style="dataStyle(row['all_avg'].bold)">
               {{ row["all_avg"].val }}
@@ -343,9 +464,12 @@
 
 <script lang="ts" setup>
 import { CellStyle } from "element-plus";
-import { StyleValue } from "vue";
-import { frontalViewData } from "./section2-frontal-view";
+import { StyleValue, ref } from "vue";
+import { frontalViewData, Data } from "./section2-frontal-view";
 import { sideViewData } from "./section2-side-view";
+
+const frontalViewDataRef = ref(frontalViewData);
+const sideViewDataRef = ref(sideViewData);
 
 function headerCellStyle({}): CellStyle<cellStyle> {
   const style = { color: "black" };
@@ -365,6 +489,25 @@ function headerCellStyle({}): CellStyle<cellStyle> {
   //   Object.assign(style, { backgroundColor: "rgb(217,217,217)" });
   // }
   return style;
+}
+
+function sortChange({ prop, order }: { prop: string; order: string }) {
+  frontalViewDataRef.value.sort((a: Data, b: Data) => {
+    console.log(a);
+    if (order === "ascending") {
+      return Number.parseFloat(a[prop].val) - Number.parseFloat(b[prop].val);
+    }
+    return b[prop].val - a[prop].val;
+  });
+}
+
+function sortChange2({ prop, order }: { prop: string; order: string }) {
+  sideViewDataRef.value.sort((a: Data, b: Data) => {
+    if (order === "ascending") {
+      return Number.parseFloat(a[prop].val) - Number.parseFloat(b[prop].val);
+    }
+    return b[prop].val - a[prop].val;
+  });
 }
 
 function dataStyle(bold: boolean): StyleValue {

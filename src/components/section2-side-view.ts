@@ -172,7 +172,7 @@ const sideViewData = [
 ];
 
 sideViewData.forEach((val, index) => {
-  Object.assign(val, { rank: index + 1 });
+  Object.assign(val, { rank: { val: index + 1 } });
 });
 
 export { sideViewData };

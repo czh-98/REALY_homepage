@@ -1,4 +1,4 @@
-const frontalViewData = [
+const frontalViewData: Data[] = [
   {
     nose_avg: { val: "1.719", bold: false },
     nose_med: { val: "1.683", bold: false },
@@ -223,7 +223,31 @@ const frontalViewData = [
 ];
 
 frontalViewData.forEach((val, index) => {
-  Object.assign(val, { rank: index + 1 });
+  Object.assign(val, { rank: { val: index + 1 } });
 });
+
+interface DataItem {
+  val: string;
+  bold: boolean;
+}
+
+export interface Data {
+  nose_avg: DataItem;
+  nose_med: DataItem;
+  nose_std: DataItem;
+  mouth_avg: DataItem;
+  mouth_med: DataItem;
+  mouth_std: DataItem;
+  forehead_avg: DataItem;
+  forehead_med: DataItem;
+  forehead_std: DataItem;
+  cheek_avg: DataItem;
+  cheek_med: DataItem;
+  cheek_std: DataItem;
+  all_avg: DataItem;
+  method: string;
+  link: string;
+  [key: string]: any;
+}
 
 export { frontalViewData };
