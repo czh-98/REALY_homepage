@@ -1,0 +1,45 @@
+<template>
+  <div class="container">
+    <h2>Abstract</h2>
+    <p>
+      The evaluation of 3D face reconstruction results typically relies on a
+      rigid shape alignment between the estimated 3D model and the ground-truth
+      scan. We observe that aligning two shapes with different reference points
+      can largely affect the evaluation results. This poses difficulties for
+      precisely diagnosing and improving a 3D face reconstruction method. In
+      this paper, we propose a novel evaluation approach with a new benchmark
+      REALY, consists of 100 globally aligned face scans with accurate facial
+      keypoints, high-quality region masks, and topology-consistent meshes. Our
+      approach performs region-wise shape alignment and leads to more accurate,
+      bidirectional correspondences during computing the shape errors. The
+      fine-grained, region-wise evaluation results provide us detailed
+      understandings about the performance of state-of-the-art 3D face
+      reconstruction methods. For example, our experiments on single-image based
+      reconstruction methods reveal that DECA performs the best on nose regions,
+      while GANFit performs better on cheek regions. Besides, a new and
+      high-quality 3DMM basis, HIFI3D++, is further derived using the same
+      procedure as we construct REALY to align and retopologize several 3D face
+      datasets. We will release REALY, HIFI3D++, and our new evaluation pipeline
+      at
+      <el-link type="primary" href="https://realy3dface.com">
+        <span class="link">https://realy3dface.com</span> </el-link
+      >.
+    </p>
+    <p class="keywords">
+      <strong>Keywords:</strong> 3D Face Reconstruction, Evaluation, Benchmark,
+      3DMM
+    </p>
+  </div>
+</template>
+
+<style lang="postcss" scoped>
+.container {
+  p {
+    line-height: 1.5rem;
+  }
+
+  .link {
+    font-size: 1.2rem;
+  }
+}
+</style>
