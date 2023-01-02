@@ -465,7 +465,7 @@
 <script lang="ts" setup>
 import { CellStyle } from "element-plus";
 import { StyleValue, ref } from "vue";
-import { frontalViewData, Data } from "./section2-frontal-view";
+import { frontalViewData } from "./section2-frontal-view";
 import { sideViewData } from "./section2-side-view";
 
 const frontalViewDataRef = ref(frontalViewData);
