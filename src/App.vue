@@ -21,17 +21,14 @@ import Citation from "./components/Citation.vue";
 <style>
 @import url("./assets/academicons.min.css");
 
-html,
-body {
-  @media screen and (max-width: 768px) {
-    font-size: 14px;
-  }
+* {
+  box-sizing: border-box;
 }
+
 body {
   display: flex;
   justify-content: center;
   width: 100%;
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: optima, "Optima Bold", "Microsoft YaHei", "Times New Roman",
@@ -48,15 +45,12 @@ body {
   }
 }
 #app {
-  max-width: 70%;
+  width: min(100%, 1280px);
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-top: 2rem;
-
-  @media screen and (max-width: 768px) {
-    max-width: 90%;
-  }
+  padding: 0 1rem;
 }
 h1,
 h2,

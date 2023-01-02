@@ -255,8 +255,7 @@
           prop="nose_std"
           label="std."
           align="center"
-          sortasortable="custom"
-          ble
+          sortable="custom"
         >
           <template #default="{ row }">
             <span :style="dataStyle(row['nose_std'].bold)">
@@ -472,7 +471,7 @@ const frontalViewDataRef = ref(frontalViewData);
 const sideViewDataRef = ref(sideViewData);
 
 function headerCellStyle({}): CellStyle<cellStyle> {
-  const style = { color: "black", padding: "6px" };
+  const style = { color: "black", padding: "6px 0" };
   // if (column.property === "nose") {
   //   Object.assign(style, { backgroundColor: "rgb(181,228,140)" });
   // }
