@@ -493,7 +493,6 @@ function headerCellStyle({}): CellStyle<cellStyle> {
 
 function sortChange({ prop, order }: { prop: string; order: string }) {
   frontalViewDataRef.value.sort((a: Data, b: Data) => {
-    console.log(a);
     if (order === "ascending") {
       return Number.parseFloat(a[prop].val) - Number.parseFloat(b[prop].val);
     }
