@@ -16,26 +16,35 @@
     <div class="open-source">
       <el-link
         type="primary"
-        href="https://arxiv.org/abs/2203.09729"
+        href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136680072.pdf"
         target="_blank"
       >
-        <img class="icon" src="/images/contents/paper.svg" />
+        <font-awesome-icon icon="fa-regular fa-file-pdf" class="icon" />
         Paper
+      </el-link>
+      <el-link
+        type="primary"
+        href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136680072-supp.pdf"
+        target="_blank"
+      >
+        <font-awesome-icon icon="fa-solid fa-paperclip" class="icon" />
+        Supplementary
       </el-link>
       <el-link
         type="primary"
         href="https://arxiv.org/abs/2203.09729"
         target="_blank"
       >
-        <img class="icon" src="/images/contents/attachment.svg" />
-        Supplementary
+        <!-- <img class="icon" src="/images/contents/github.svg" /> -->
+        <i class="ai ai-arxiv ai-lg" style="margin-right: 5px" />
+        arXiv
       </el-link>
       <el-link
         type="primary"
         href="https://github.com/czh-98/REALY"
         target="_blank"
       >
-        <img class="icon" src="/images/contents/github.svg" />
+        <font-awesome-icon icon="fa-brands fa-github" class="icon" />
         Code
       </el-link>
     </div>
@@ -79,8 +88,8 @@
       font-size: 1rem;
     }
     .icon {
-      height: 1.5rem;
-      margin-right: 5px;
+      margin-right: 10px;
+      font-size: 1.2rem;
     }
   }
   .pipeline {
