@@ -1,4 +1,4 @@
-import { addRank, boldMinValue } from "./utils";
+import { boldMinValue, addRank } from "./utils";
 
 const sideViewData = [
   {
