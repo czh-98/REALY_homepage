@@ -225,10 +225,10 @@ let frontalViewData: Data[] = [
   {
     nose_avg: { val: "1.585", bold: false },
     nose_med: { val: "1.542", bold: false },
-    nose_std: { val: "0.326", bold: false },
+    nose_std: { val: "0.325", bold: false },
     mouth_avg: { val: "3.478", bold: false },
     mouth_med: { val: "3.439", bold: false },
-    mouth_std: { val: "1.227", bold: false },
+    mouth_std: { val: "1.204", bold: false },
     forehead_avg: { val: "2.374", bold: false },
     forehead_med: { val: "2.251", bold: false },
     forehead_std: { val: "0.683", bold: false },
