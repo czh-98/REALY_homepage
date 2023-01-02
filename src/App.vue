@@ -19,6 +19,8 @@ import Citation from "./components/Citation.vue";
 </template>
 
 <style>
+@import url("./assets/academicons.min.css");
+
 html,
 body {
   @media screen and (max-width: 768px) {
@@ -32,7 +34,9 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Microsoft YaHei", optima, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 14px;
 }
 #app {
   max-width: 70%;
