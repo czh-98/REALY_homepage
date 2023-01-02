@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -21,6 +20,12 @@ jobs:
         npm run build
         
     - name: deploy
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: dist
+      run: |
+        cd dist
+        echo > .nojekyll
+        
+        git init
+        git checkout -B main
+        git add -A
+        git commit -m 'deploy'
+        git push -f git@github.com:czh-98/REALY_homepage.git main:gh-pages
