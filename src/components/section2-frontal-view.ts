@@ -1,18 +1,20 @@
+import { boldMinValue, addRank } from "./utils";
+
 const frontalViewData: Data[] = [
   {
     nose_avg: { val: "1.719", bold: false },
     nose_med: { val: "1.683", bold: false },
-    nose_std: { val: "0.354", bold: true },
-    mouth_avg: { val: "1.368", bold: true },
-    mouth_med: { val: "1.301", bold: true },
+    nose_std: { val: "0.354", bold: false },
+    mouth_avg: { val: "1.368", bold: false },
+    mouth_med: { val: "1.301", bold: false },
     mouth_std: { val: "0.439", bold: false },
-    forehead_avg: { val: "2.015", bold: true },
-    forehead_med: { val: "2.007", bold: true },
-    forehead_std: { val: "0.449", bold: true },
+    forehead_avg: { val: "2.015", bold: false },
+    forehead_med: { val: "2.007", bold: false },
+    forehead_std: { val: "0.449", bold: false },
     cheek_avg: { val: "1.528", bold: false },
     cheek_med: { val: "1.442", bold: false },
     cheek_std: { val: "0.501", bold: false },
-    all_avg: { val: "1.657", bold: true },
+    all_avg: { val: "1.657", bold: false },
     method: "Deep3D",
     link: "https://arxiv.org/pdf/1903.08527.pdf",
   },
@@ -43,8 +45,8 @@ const frontalViewData: Data[] = [
     forehead_avg: { val: "2.402", bold: false },
     forehead_med: { val: "3.339", bold: false },
     forehead_std: { val: "0.545", bold: false },
-    cheek_avg: { val: "1.329", bold: true },
-    cheek_med: { val: "1.234", bold: true },
+    cheek_avg: { val: "1.329", bold: false },
+    cheek_med: { val: "1.234", bold: false },
     cheek_std: { val: "0.504", bold: false },
     all_avg: { val: "1.868", bold: false },
     method: "GANFit",
@@ -85,8 +87,8 @@ const frontalViewData: Data[] = [
     link: "https://arxiv.org/pdf/2009.09960.pdf",
   },
   {
-    nose_avg: { val: "1.697", bold: true },
-    nose_med: { val: "1.654", bold: true },
+    nose_avg: { val: "1.697", bold: false },
+    nose_med: { val: "1.654", bold: false },
     nose_std: { val: "0.355", bold: false },
     mouth_avg: { val: "2.516", bold: false },
     mouth_med: { val: "2.465", bold: false },
@@ -124,13 +126,13 @@ const frontalViewData: Data[] = [
     nose_std: { val: "0.835", bold: false },
     mouth_avg: { val: "1.448", bold: false },
     mouth_med: { val: "1.438", bold: false },
-    mouth_std: { val: "0.406", bold: true },
+    mouth_std: { val: "0.406", bold: false },
     forehead_avg: { val: "2.384", bold: false },
     forehead_med: { val: "2.302", bold: false },
     forehead_std: { val: "0.578", bold: false },
     cheek_avg: { val: "1.456", bold: false },
     cheek_med: { val: "1.321", bold: false },
-    cheek_std: { val: "0.485", bold: true },
+    cheek_std: { val: "0.485", bold: false },
     all_avg: { val: "2.017", bold: false },
     method: "CEST",
     link: "https://arxiv.org/pdf/2110.04800.pdf",
@@ -222,32 +224,7 @@ const frontalViewData: Data[] = [
   },
 ];
 
-frontalViewData.forEach((val, index) => {
-  Object.assign(val, { rank: { val: index + 1 } });
-});
-
-interface DataItem {
-  val: string;
-  bold: boolean;
-}
-
-export interface Data {
-  nose_avg: DataItem;
-  nose_med: DataItem;
-  nose_std: DataItem;
-  mouth_avg: DataItem;
-  mouth_med: DataItem;
-  mouth_std: DataItem;
-  forehead_avg: DataItem;
-  forehead_med: DataItem;
-  forehead_std: DataItem;
-  cheek_avg: DataItem;
-  cheek_med: DataItem;
-  cheek_std: DataItem;
-  all_avg: DataItem;
-  method: string;
-  link: string;
-  [key: string]: any;
-}
+addRank(frontalViewData);
+boldMinValue(frontalViewData);
 
 export { frontalViewData };

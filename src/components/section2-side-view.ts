@@ -1,18 +1,20 @@
+import { addRank, boldMinValue } from "./utils";
+
 const sideViewData = [
   {
-    nose_avg: { val: "1.749", bold: true },
+    nose_avg: { val: "1.749", bold: false },
     nose_med: { val: "1.704", bold: false },
-    nose_std: { val: "0.343", bold: true },
+    nose_std: { val: "0.343", bold: false },
     mouth_avg: { val: "1.411", bold: false },
     mouth_med: { val: "1.359", bold: false },
-    mouth_std: { val: "0.395", bold: true },
-    forehead_avg: { val: "2.074", bold: true },
-    forehead_med: { val: "2.063", bold: true },
-    forehead_std: { val: "0.486", bold: true },
-    cheek_avg: { val: "1.528", bold: true },
+    mouth_std: { val: "0.395", bold: false },
+    forehead_avg: { val: "2.074", bold: false },
+    forehead_med: { val: "2.063", bold: false },
+    forehead_std: { val: "0.486", bold: false },
+    cheek_avg: { val: "1.528", bold: false },
     cheek_med: { val: "1.435", bold: false },
-    cheek_std: { val: "0.517", bold: true },
-    all_avg: { val: "1.691", bold: true },
+    cheek_std: { val: "0.517", bold: false },
+    all_avg: { val: "1.691", bold: false },
     method: "Deep3D",
     link: "https://arxiv.org/pdf/1903.08527.pdf",
   },
@@ -20,8 +22,8 @@ const sideViewData = [
     nose_avg: { val: "1.827", bold: false },
     nose_med: { val: "1.783", bold: false },
     nose_std: { val: "0.383", bold: false },
-    mouth_avg: { val: "1.409", bold: true },
-    mouth_med: { val: "1.353", bold: true },
+    mouth_avg: { val: "1.409", bold: false },
+    mouth_med: { val: "1.353", bold: false },
     mouth_std: { val: "0.418", bold: false },
     forehead_avg: { val: "2.248", bold: false },
     forehead_med: { val: "2.171", bold: false },
@@ -52,7 +54,7 @@ const sideViewData = [
   },
   {
     nose_avg: { val: "1.771", bold: false },
-    nose_med: { val: "1.695", bold: true },
+    nose_med: { val: "1.695", bold: false },
     nose_std: { val: "0.521", bold: false },
     mouth_avg: { val: "1.560", bold: false },
     mouth_med: { val: "1.542", bold: false },
@@ -146,7 +148,7 @@ const sideViewData = [
     forehead_med: { val: "2.402", bold: false },
     forehead_std: { val: "0.718", bold: false },
     cheek_avg: { val: "1.555", bold: false },
-    cheek_med: { val: "1.422", bold: true },
+    cheek_med: { val: "1.422", bold: false },
     cheek_std: { val: "0.822", bold: false },
     all_avg: { val: "2.261", bold: false },
     method: "DECA-f",
@@ -171,8 +173,7 @@ const sideViewData = [
   },
 ];
 
-sideViewData.forEach((val, index) => {
-  Object.assign(val, { rank: { val: index + 1 } });
-});
+addRank(sideViewData);
+boldMinValue(sideViewData);
 
 export { sideViewData };
