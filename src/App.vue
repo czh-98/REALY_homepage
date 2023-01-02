@@ -34,9 +34,13 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Microsoft YaHei", optima, "Times New Roman", Times, serif;
+  font-family: optima, "Microsoft YaHei", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 14px;
+  @font-face {
+    font-family: optima;
+    src: url(/fonts/optima.ttf);
+  }
 }
 #app {
   max-width: 70%;
