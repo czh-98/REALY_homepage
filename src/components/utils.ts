@@ -23,4 +23,11 @@ function addRank(dataCollection: Data[]) {
   });
 }
 
-export { boldMinValue, addRank };
+function sortByAll(dataCollection: Data[]) {
+  return dataCollection.sort(
+    (a: Data, b: Data) =>
+      Number.parseFloat(a.all_avg.val) - Number.parseFloat(b.all_avg.val)
+  );
+}
+
+export { boldMinValue, addRank, sortByAll };

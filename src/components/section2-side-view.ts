@@ -1,6 +1,6 @@
-import { boldMinValue, addRank } from "./utils";
+import { boldMinValue, addRank, sortByAll } from "./utils";
 
-const sideViewData = [
+let sideViewData = [
   {
     nose_avg: { val: "1.749", bold: false },
     nose_med: { val: "1.704", bold: false },
@@ -224,6 +224,7 @@ const sideViewData = [
   },
 ];
 
+sideViewData = sortByAll(sideViewData);
 addRank(sideViewData);
 boldMinValue(sideViewData);
 

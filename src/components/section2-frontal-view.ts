@@ -1,6 +1,6 @@
-import { boldMinValue, addRank } from "./utils";
+import { boldMinValue, addRank, sortByAll } from "./utils";
 
-const frontalViewData: Data[] = [
+let frontalViewData: Data[] = [
   {
     nose_avg: { val: "1.719", bold: false },
     nose_med: { val: "1.683", bold: false },
@@ -275,6 +275,7 @@ const frontalViewData: Data[] = [
   },
 ];
 
+frontalViewData = sortByAll(frontalViewData);
 addRank(frontalViewData);
 boldMinValue(frontalViewData);
 

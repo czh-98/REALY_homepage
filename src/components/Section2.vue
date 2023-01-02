@@ -472,7 +472,7 @@ const frontalViewDataRef = ref(frontalViewData);
 const sideViewDataRef = ref(sideViewData);
 
 function headerCellStyle({}): CellStyle<cellStyle> {
-  const style = { color: "black" };
+  const style = { color: "black", padding: "6px" };
   // if (column.property === "nose") {
   //   Object.assign(style, { backgroundColor: "rgb(181,228,140)" });
   // }
