@@ -218,7 +218,7 @@ let sideViewData = [
     cheek_avg: { val: "1.599", bold: false },
     cheek_med: { val: "1.480", bold: false },
     cheek_std: { val: "0.563", bold: false },
-    all_avg: { val: "2.125", bold: false },
+    all_avg: { val: "2.402", bold: false },
     method: "EMOCA-f",
     link: "https://arxiv.org/pdf/2204.11312.pdf",
   },
