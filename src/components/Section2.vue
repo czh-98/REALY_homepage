@@ -432,27 +432,27 @@
     <h2>Acknowledgements and Copyrights</h2>
     <p>
       The benchmark is derived from the
-      <a class="link" href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/"
+      <a class="link" href="https://www-users.york.ac.uk/~np7/research/LYHM/"
         >LYHM</a
       >
       dataset. Please also cite their paper if you use this benchmark. The test
-      portrait images are rendered using the 3D models provided by
-      <a class="link" href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/"
-        >LYHM</a
+      portrait images are rendered using the 3D scans provided by the
+      <a class="link" href="https://www-users.york.ac.uk/~np7/research/Headspace/"
+        >HeadSpace</a
       >
       dataset.
       <b
         >The copyright of the portraits belongs to the original owner,
         <a
           class="link"
-          href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/"
+          href="https://www-users.york.ac.uk/~np7/research/LYHM/"
           >LYHM</a
         >
         dataset. Please contact them to get access to the raw scan data. Note
         that
         <a
           class="link"
-          href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/"
+          href="https://www-users.york.ac.uk/~np7/research/LYHM/"
           >LYHM</a
         >
         dataset allows non-commercial research and education purposes use only.

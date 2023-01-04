@@ -18,7 +18,7 @@
     </pre>
     <p>
       The
-      <a class="link" href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/"
+      <a class="link" href="https://www-users.york.ac.uk/~np7/research/LYHM/"
         >LYHM</a
       >
       paper:

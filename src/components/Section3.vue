@@ -7,8 +7,8 @@
       We also present the expressive 3DMM during constructing our REALY
       benchmark. The HIFI3D++ 3DMM is a full-head shape basis built from about
       2,000 high quality topology consistent shapes by retopologizing
-      <a class="link" href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/"
-        >LYHM</a
+      <a class="link" href="https://www-users.york.ac.uk/~np7/research/Headspace/"
+        >HeadSpace</a
       >, <a class="link" href="https://facescape.nju.edu.cn/">FaceScape</a>, and
       <a
         class="link"
@@ -24,8 +24,8 @@
     <h2>Acknowledgements</h2>
     <p>
       HIFI3D++ is derived from
-      <a class="link" href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/"
-        >LYHM</a
+      <a class="link" href="https://www-users.york.ac.uk/~np7/research/Headspace/"
+        >HeadSpace</a
       >, <a class="link" href="https://facescape.nju.edu.cn/">FaceScape</a>, and
       <a
         class="link"

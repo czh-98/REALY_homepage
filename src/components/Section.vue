@@ -2,11 +2,7 @@
   <div class="container">
     <h2>
       REALY Benchmark (<u>Re</u>gion-aware 3D face benchmark based on the
-      <a
-        class="link"
-        href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/"
-        target="_blank"
-      >
+      <a class="link" href="https://www-users.york.ac.uk/~np7/research/LYHM/" target="_blank">
         <u>LY</u>HM
       </a>
       dataset)
@@ -15,10 +11,8 @@
     <img src="/images/contents/multi-view.jpg" />
     <p>
       The REALY benchmark uses multi-view rendered portraits images of 100 high
-      quality scans from
-      <a class="link" href="https://www-users.cs.york.ac.uk/~nep/research/LYHM/"
-        >LYHM</a
-      >
+      quality scans from the <a class="link" href="https://www-users.york.ac.uk/~np7/research/Headspace/">HeadSpace</a>
+      dataset
       to evaluate 3D face reconstruction accuracy. Examples of REALY benchmark:
       <i>First row</i>: globally aligned high-resolution scans with textures.
       <i>Second row</i>: retopologized meshes in HIFI3D topology with
@@ -43,11 +37,7 @@
       <el-divider />
     </div>
     <p>The statistical information of REALY is summarized as follows.</p>
-    <el-table
-      class="table"
-      :data="tableData1"
-      :header-cell-style="headerCellStyle"
-    >
+    <el-table class="table" :data="tableData1" :header-cell-style="headerCellStyle">
       <el-table-column prop="metric" label="Metric" align="center">
         <el-table-column prop="category" label="Category" align="center" />
       </el-table-column>
@@ -64,11 +54,7 @@
         <el-table-column prop="black" label="Black" align="center" />
       </el-table-column>
     </el-table>
-    <el-table
-      class="table"
-      :data="tableData2"
-      :header-cell-style="headerCellStyle"
-    >
+    <el-table class="table" :data="tableData2" :header-cell-style="headerCellStyle">
       <el-table-column prop="metric" label="Metric" align="center">
         <el-table-column prop="category" label="Category" align="center" />
       </el-table-column>
@@ -77,19 +63,11 @@
         <el-table-column prop="m" label="M" align="center" />
       </el-table-column>
       <el-table-column prop="bmi" label="BMI" align="center">
-        <el-table-column
-          prop="underweight"
-          label="Underweight"
-          align="center"
-        />
+        <el-table-column prop="underweight" label="Underweight" align="center" />
         <el-table-column prop="normal" label="Normal" align="center" />
         <el-table-column prop="overweight" label="Overweight" align="center" />
         <el-table-column prop="obese" label="Obese" align="center" />
-        <el-table-column
-          prop="extremeObese"
-          label="Extreme Obese"
-          align="center"
-        />
+        <el-table-column prop="extremeObese" label="Extreme Obese" align="center" />
       </el-table-column>
     </el-table>
     <p>
@@ -141,11 +119,13 @@ function headerCellStyle(): CellStyle<object> {
     text-decoration: none;
     color: #409eff;
   }
+
   .note {
     p {
       margin: 2rem auto;
     }
   }
+
   .table {
     margin: 2rem auto;
   }
