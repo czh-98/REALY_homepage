@@ -222,6 +222,23 @@ let sideViewData = [
     method: "EMOCA-f",
     link: "https://arxiv.org/pdf/2204.11312.pdf",
   },
+  {
+    nose_avg: { val: "1.642", bold: false },
+    nose_med: { val: "1.601", bold: false },
+    nose_std: { val: "0.310", bold: false },
+    mouth_avg: { val: "1.285", bold: false },
+    mouth_med: { val: "1.200", bold: false },
+    mouth_std: { val: "0.528", bold: false },
+    forehead_avg: { val: "1.906", bold: false },
+    forehead_med: { val: "1.882", bold: false },
+    forehead_std: { val: "0.479", bold: false },
+    cheek_avg: { val: "1.038", bold: false },
+    cheek_med: { val: "0.978", bold: false },
+    cheek_std: { val: "0.322", bold: false },
+    all_avg: { val: "1.468", bold: false },
+    method: "HRN",
+    link: "https://arxiv.org/pdf/2302.14434.pdf",
+  },
 ];
 
 sideViewData = sortByAll(sideViewData);

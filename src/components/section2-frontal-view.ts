@@ -273,6 +273,23 @@ let frontalViewData: Data[] = [
     method: "EMOCA-f",
     link: "https://arxiv.org/pdf/2204.11312.pdf",
   },
+  {
+    nose_avg: { val: "1.722", bold: false },
+    nose_med: { val: "1.685", bold: false },
+    nose_std: { val: "0.330", bold: false },
+    mouth_avg: { val: "1.357", bold: false },
+    mouth_med: { val: "1.226", bold: false },
+    mouth_std: { val: "0.523", bold: false },
+    forehead_avg: { val: "1.995", bold: false },
+    forehead_med: { val: "1.990", bold: false },
+    forehead_std: { val: "0.476", bold: false },
+    cheek_avg: { val: "1.072", bold: false },
+    cheek_med: { val: "1.063", bold: false },
+    cheek_std: { val: "0.333", bold: false },
+    all_avg: { val: "1.537", bold: false },
+    method: "HRN",
+    link: "https://arxiv.org/pdf/2302.14434.pdf",
+  },
 ];
 
 frontalViewData = sortByAll(frontalViewData);
