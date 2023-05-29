@@ -239,6 +239,23 @@ let sideViewData = [
     method: "HRN",
     link: "https://arxiv.org/pdf/2302.14434.pdf",
   },
+  {
+    nose_avg: { val: "1.576", bold: false },
+    nose_med: { val: "1.556", bold: false },
+    nose_std: { val: "0.338", bold: false },
+    mouth_avg: { val: "2.218", bold: false },
+    mouth_med: { val: "1.995", bold: false },
+    mouth_std: { val: "0.952", bold: false },
+    forehead_avg: { val: "2.142", bold: false },
+    forehead_med: { val: "2.093", bold: false },
+    forehead_std: { val: "0.554", bold: false },
+    cheek_avg: { val: "1.112", bold: false },
+    cheek_med: { val: "1.068", bold: false },
+    cheek_std: { val: "0.278", bold: false },
+    all_avg: { val: "1.762", bold: false },
+    method: "AlbedoGAN",
+    link: "https://arxiv.org/pdf/2304.12483.pdf",
+  },
 ];
 
 sideViewData = sortByAll(sideViewData);

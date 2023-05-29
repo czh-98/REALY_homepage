@@ -290,6 +290,23 @@ let frontalViewData: Data[] = [
     method: "HRN",
     link: "https://arxiv.org/pdf/2302.14434.pdf",
   },
+  {
+    nose_avg: { val: "1.656", bold: false },
+    nose_med: { val: "1.636", bold: false },
+    nose_std: { val: "0.374", bold: false },
+    mouth_avg: { val: "2.087", bold: false },
+    mouth_med: { val: "1.927", bold: false },
+    mouth_std: { val: "0.839", bold: false },
+    forehead_avg: { val: "2.102", bold: false },
+    forehead_med: { val: "2.035", bold: false },
+    forehead_std: { val: "0.512", bold: false },
+    cheek_avg: { val: "1.141", bold: false },
+    cheek_med: { val: "1.103", bold: false },
+    cheek_std: { val: "0.303", bold: false },
+    all_avg: { val: "1.746", bold: false },
+    method: "AlbedoGAN",
+    link: "https://arxiv.org/pdf/2304.12483.pdf",
+  },
 ];
 
 frontalViewData = sortByAll(frontalViewData);
