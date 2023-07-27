@@ -298,7 +298,7 @@ let sideViewData = [
     mouth_med: { val: "1.449", bold: false },
     mouth_std: { val: "0.454", bold: false },
     forehead_avg: { val: "1.427", bold: false },
-    forehead_med: { val: "1.449", bold: false },
+    forehead_med: { val: "1.369", bold: false },
     forehead_std: { val: "0.400", bold: false },
     cheek_avg: { val: "1.439", bold: false },
     cheek_med: { val: "1.394", bold: false },
