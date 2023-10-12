@@ -409,6 +409,23 @@ let frontalViewData: Data[] = [
     method: "HiFace-f",
     link: "https://arxiv.org/pdf/2303.11225.pdf",
   },
+  {
+    nose_avg: { val: "1.708", bold: false },
+    nose_med: { val: "1.688", bold: false },
+    nose_std: { val: "0.349", bold: false },
+    mouth_avg: { val: "1.708", bold: false },
+    mouth_med: { val: "1.777", bold: false },
+    mouth_std: { val: "0.563", bold: false },
+    forehead_avg: { val: "2.350", bold: false },
+    forehead_med: { val: "2.343", bold: false },
+    forehead_std: { val: "0.551", bold: false },
+    cheek_avg: { val: "1.593", bold: false },
+    cheek_med: { val: "1.482", bold: false },
+    cheek_std: { val: "0.540", bold: false },
+    all_avg: { val: "1.882", bold: false },
+    method: "PSL",
+    link: "https://studios.disneyresearch.com/app/uploads/2023/09/A-Perceptual-Shape-Loss-for-Monocular-3D-Face-Reconstruction-Paper.pdf",
+  },
 ];
 
 frontalViewData = sortByAll(frontalViewData);

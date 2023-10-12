@@ -324,6 +324,23 @@ let sideViewData = [
     method: "HiFace-f",
     link: "https://arxiv.org/pdf/2303.11225.pdf",
   },
+  {
+    nose_avg: { val: "1.685", bold: false },
+    nose_med: { val: "1.629", bold: false },
+    nose_std: { val: "0.475", bold: false },
+    mouth_avg: { val: "1.820", bold: false },
+    mouth_med: { val: "1.757", bold: false },
+    mouth_std: { val: "0.557", bold: false },
+    forehead_avg: { val: "2.454", bold: false },
+    forehead_med: { val: "2.426", bold: false },
+    forehead_std: { val: "0.608", bold: false },
+    cheek_avg: { val: "1.469", bold: false },
+    cheek_med: { val: "1.378", bold: false },
+    cheek_std: { val: "0.495", bold: false },
+    all_avg: { val: "1.857", bold: false },
+    method: "PSL",
+    link: "https://studios.disneyresearch.com/app/uploads/2023/09/A-Perceptual-Shape-Loss-for-Monocular-3D-Face-Reconstruction-Paper.pdf",
+  },
 ];
 
 sideViewData = sortByAll(sideViewData);
