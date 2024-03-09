@@ -339,7 +339,7 @@ let sideViewData = [
     cheek_std: { val: "0.495", bold: false },
     all_avg: { val: "1.857", bold: false },
     method: "PSL",
-    link: "https://studios.disneyresearch.com/app/uploads/2023/09/A-Perceptual-Shape-Loss-for-Monocular-3D-Face-Reconstruction-Paper.pdf",
+    link: "https://arxiv.org/pdf/2310.19580",
   },
 ];
 
